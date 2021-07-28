@@ -15,3 +15,5 @@
 # Run the app
 
 `http://localhost:3000`
+
+# Pages
