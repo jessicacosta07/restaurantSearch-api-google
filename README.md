@@ -1,3 +1,8 @@
-# restaurante-api-google
+# API Google
 
-# Creating a website to find restaurants using Google Maps that queries Google API
+# Bootcamp MRV Front End SPA Developer
+
+# Skills
+![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
