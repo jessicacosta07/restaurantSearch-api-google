@@ -5,6 +5,7 @@ import { Container, Search, Logo, Wrapper, Map, CarouselTitle } from './styled';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 import restaurante from '../../assets/restaurante-fake.png';
+import { Card } from '../../components';
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('');
@@ -22,27 +23,20 @@ const Home = () => {
                 <Search>
                     <Logo src={logo} alt="logo da empresa" />
                     <TextField
-                        label="Pesquisar"
-                        outlined
-                        trailingIcon={<MaterialIcon role="button" icon="search" />}>
+                        trailingIcon={<MaterialIcon role="button" />}>
                         <Input
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)} />
                     </TextField>
                     <CarouselTitle>Na sua Área</CarouselTitle>
                     <Slider {...settings}>
-                        <div>
-                            <img src={restaurante} />
-                        </div>
-                        <div>
-                            <img src={restaurante} />
-                        </div>
-                        <div>
-                            <img src={restaurante} />
-                        </div>
-                        <div>
-                            <img src={restaurante} />
-                        </div>
+                        <Card photo = {restaurante} />
+                        <Card photo = {restaurante} />
+                        <Card photo = {restaurante} />
+                        <Card photo = {restaurante} />
+                        <Card photo = {restaurante} />
+                        <Card photo = {restaurante} />
+                        <Card photo = {restaurante} />
                     </Slider>
                 </Search>
             </Container>
