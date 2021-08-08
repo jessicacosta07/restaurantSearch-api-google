@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
 import logo from '../../assets/logo.svg';
-import { Container, Search, Logo, Wrapper, Map, CarouselTitle } from './styled';
+import { Container, Search, Logo, Wrapper, Map, CarouselTitle, Carousel } from './styled';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 import restaurante from '../../assets/restaurante-fake.png';
@@ -29,15 +29,15 @@ const Home = () => {
                             onChange={(e) => setInputValue(e.target.value)} />
                     </TextField>
                     <CarouselTitle>Na sua Área</CarouselTitle>
-                    <Slider {...settings}>
-                        <Card photo = {restaurante} />
-                        <Card photo = {restaurante} />
-                        <Card photo = {restaurante} />
-                        <Card photo = {restaurante} />
-                        <Card photo = {restaurante} />
-                        <Card photo = {restaurante} />
-                        <Card photo = {restaurante} />
-                    </Slider>
+                    <Carousel {...settings}>
+                        <Card photo={restaurante} />
+                        <Card photo={restaurante} />
+                        <Card photo={restaurante} />
+                        <Card photo={restaurante} />
+                        <Card photo={restaurante} />
+                        <Card photo={restaurante} />
+                        <Card photo={restaurante} />
+                    </Carousel>
                 </Search>
             </Container>
             <Map />

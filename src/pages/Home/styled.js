@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Slider from 'react-slick';
 
 export const Container = styled.aside`
   background-color: ${({ theme: { colors } }) => colors.background};
@@ -26,6 +27,12 @@ export const Wrapper = styled.div`
 export const Map = styled.div`
     background-color: red;
     width: 500px;
+`;
+
+export const Carousel = styled(Slider)`
+    .slick-slide{
+      margin-right: 16px;
+    }
 `;
 
 export const CarouselTitle = styled.h1`
