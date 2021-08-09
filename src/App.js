@@ -7,9 +7,7 @@ import '@material/react-material-icon/dist/material-icon.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Reset } from 'styled-reset';
-import store from './redux/store';
-import theme from './theme';
-import Home from './pages/Home';
+import store from './redux/reducers/store';
 
 function App() {
   return (

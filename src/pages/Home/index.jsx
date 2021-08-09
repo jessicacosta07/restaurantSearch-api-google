@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Slider from "react-slick";
 import logo from '../../assets/logo.svg';
+import { useSelector } from 'react-redux';
 import { Container, Search, Logo, Wrapper, CarouselTitle, Carousel } from './styled';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 import restaurante from '../../assets/restaurante-fake.png';
 import { Card, RestaurantCard, Modal, Map } from '../../components';
+import { Restaurant } from '@components/RestaurantCard/styled';
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('');
@@ -39,16 +40,14 @@ const Home = () => {
                     </TextField>
                     <CarouselTitle>Na sua Área</CarouselTitle>
                     <Carousel {...settings}>
-                        <Card photo={restaurante} title='nome sei la' />
-                        <Card photo={restaurante} title='nome sei la' />
-                        <Card photo={restaurante} title='nome sei la' />
-                        <Card photo={restaurante} title='nome sei la' />
-                        <Card photo={restaurante} title='nome sei la' />
-                        <Card photo={restaurante} title='nome sei la' />
-                        <Card photo={restaurante} title='nome sei la' />
+                        {restaurants.map((restaurant) => (
+                            <Card
+                                photo={restaurant.photos ? restaurant.photos[0].getUrl() : restaurante}
+                                title={restaurante.name} />
+                        ))}
                     </Carousel>
                 </Search>
-                <RestaurantCard />
+                {restaurants.map((restaurant) => <RestaurantCard restaurant={restaurant} />)}
             </Container>
             <Map query={query} />
             {/* <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)} /> */}

@@ -4,8 +4,8 @@ export const Types = {
 };
 
 const initialState = {
-    restaurants =[],
-    restaurantSelected = null,
+    restaurants: [],
+    restaurantSelected: null,
 };
 
 export default function reducer(state = initialState, action) {
