@@ -14,7 +14,7 @@ import {
     ImageSkeleton as Skeleton,
 } from '../../components';
 import logo from '../../assets/logo.svg';
-import { Container, Search, Logo, Title, Carousel, Wrapper } from './styles';
+import { Container, Search, Logo, Title, Carousel, Wrapper } from './styled';
 
 const Home = () => {
     const [value, setValue] = useState('');

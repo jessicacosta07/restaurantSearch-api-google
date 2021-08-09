@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactStars from 'react-rating-stars-component';
 
-import { Restaurant, RestaurantInfo, Content, RestaurantPhoto } from './styles';
+import { Restaurant, RestaurantInfo, Content, RestaurantPhoto } from './styled';
 import Text from '../Text';
 import ImageSkeleton from '../ImageSkeleton';
 
