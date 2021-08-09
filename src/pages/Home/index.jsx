@@ -5,13 +5,13 @@ import { Container, Search, Logo, Wrapper, CarouselTitle, Carousel, ModalTitle, 
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 import restaurante from '../../assets/restaurante-fake.png';
-import { Card, RestaurantCard, Modal, Map } from '../../components';
+import { Card, RestaurantCard, Modal, Map, Loader } from '../../components';
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('');
     const [query, setQuery] = useState(null);
     const [placeId, setPlaceId] = useState(null);
-    const [modalOpened, setModalOpened] = useState(true);
+    const [modalOpened, setModalOpened] = useState(false);
     const [restaurants, restaurantSelected] = useSelector((state) => state.restaurants)
     const settings = {
         dots: false,
@@ -40,20 +40,25 @@ const Home = () => {
                 <Search>
                     <Logo src={logo} alt="logo da empresa" />
                     <TextField
+                        {restaurants.lenght > 0 ? (
+                            <>
+                                <CarouselTitle>Na sua Área</CarouselTitle>
+                                <Carousel {...settings}>
+                                    {restaurants.map((restaurant) => (
+                                        <Card
+                                            photo={restaurant.photos ? restaurant.photos[0].getUrl() : restaurante}
+                                            title={restaurante.name} />
+                                    ))}
+                                </Carousel>
+                            </>
+                        ) : (<Loader />
+                        )}
                         trailingIcon={<MaterialIcon role="button" />}>
                         <Input
                             value={inputValue}
                             onKeyPress={handleKeyPress}
                             onChange={(e) => setInputValue(e.target.value)} />
                     </TextField>
-                    <CarouselTitle>Na sua Área</CarouselTitle>
-                    <Carousel {...settings}>
-                        {restaurants.map((restaurant) => (
-                            <Card
-                                photo={restaurant.photos ? restaurant.photos[0].getUrl() : restaurante}
-                                title={restaurante.name} />
-                        ))}
-                    </Carousel>
                 </Search>
                 {restaurants.map((restaurant) =>
                     <RestaurantCard onClick={() => handleOpenModal(restaurant.place_id)} restaurant={restaurant} />
