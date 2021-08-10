@@ -1,4 +1,4 @@
-# API Google
+# Restaurant search - API Google Maps
 
 # Bootcamp MRV Front End SPA Developer
 
