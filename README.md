@@ -1,6 +1,6 @@
 # Restaurant search - API Google Maps
 
-## Bootcamp MRV Front End SPA Developer
+## Bootcamp MRV Front End SPA Developer - Digital Innovation One (DIO)
 
 # Skills
 ![HTML Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
